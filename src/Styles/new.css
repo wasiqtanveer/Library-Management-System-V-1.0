@@ -1,0 +1,220 @@
+/* --- 1. THEME VARIABLES & RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #f5f2ed;
+  --card-bg: #ffffff;
+  --primary-accent: #bc6c25;
+  --secondary-accent: #283618;
+  --text-main: #283618;
+  --text-muted: #606c38;
+  --accent-light: #dda15e;
+  --radius: 8px;
+  --thick-shadow: 8px 8px 0px var(--accent-light);
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: linear-gradient(rgba(40, 54, 24, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(40, 54, 24, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'Georgia', serif;
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* --- 2. AUTH SPECIFIC (Login/Signup) --- */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.auth-container {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 380px;
+  box-shadow: var(--thick-shadow);
+  border: 2px solid var(--secondary-accent);
+}
+
+.auth-container h2 {
+  color: var(--primary-accent);
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* --- 3. DASHBOARD SPECIFIC (Admin/Member) --- */
+.dash-wrapper {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dash-header {
+  border-bottom: 2px solid var(--secondary-accent);
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.dash-header h2 {
+  color: var(--primary-accent);
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* --- 4. REUSABLE COMPONENTS --- */
+.stat-card {
+  background: var(--card-bg);
+  padding: 30px 20px;
+  border: 2px solid var(--secondary-accent);
+  border-radius: var(--radius);
+  box-shadow: var(--thick-shadow);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover { transform: translateY(-5px); }
+
+.stat-card h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.stat-card p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-accent);
+}
+
+/* Shared Form Styles */
+.library-form { display: flex; flex-direction: column; }
+
+.library-input {
+  padding: 12px;
+  border: 2px solid var(--accent-light);
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  font-family: inherit;
+}
+
+.library-btn {
+  background: var(--secondary-accent);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.library-btn:hover { background: #3e5325; transform: translate(-2px, -2px); }
+
+
+/* --- 6. ADMIN LAYOUT & SIDEBAR --- */
+
+.layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Keeps the sidebar fixed */
+}
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background-color: var(--secondary-accent); /* Forest Green */
+  color: #fefcfb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  border-right: 4px solid var(--accent-light); /* The "Spine" edge */
+  box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+
+.sidebar h3 {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--accent-light);
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(218, 161, 94, 0.3);
+  padding-bottom: 15px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar nav p {
+  margin: 0;
+}
+
+.sidebar nav a {
+  color: #fefcfb;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 12px 15px;
+  display: block;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+.sidebar nav a:hover {
+  background: rgba(218, 161, 94, 0.2);
+  padding-left: 25px; /* Subtle "slide out" effect */
+}
+
+/* Specific Logout Button for Sidebar */
+.logout-btn {
+  background: var(--primary-accent);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: auto; /* Pushes button to the bottom */
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #a45a1d;
+}
+
+/* --- 7. MAIN CONTENT AREA --- */
+
+.content {
+  flex: 1; /* Fills remaining width */
+  height: 100vh;
+  overflow-y: auto; /* Only the content scrolls */
+  padding: 40px;
+  background-color: var(--bg-color);
+  background-image: var(--grid-pattern);
+  background-size: 20px 20px;
+}
