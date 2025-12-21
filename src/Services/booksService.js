@@ -18,8 +18,81 @@ const initialBooks = [
     category: "Self-help",
     copies: 2,
     availableCopies: 2
+  },
+  {
+    id: "b3",
+    title: "1984",
+    author: "George Orwell",
+    year: 1949,
+    category: "Fiction",
+    copies: 4,
+    availableCopies: 4
+  },
+  {
+    id: "b4",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    year: 1960,
+    category: "Fiction",
+    copies: 5,
+    availableCopies: 5
+  },
+  {
+    id: "b5",
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    year: 2011,
+    category: "History",
+    copies: 3,
+    availableCopies: 3
+  },
+  {
+    id: "b6",
+    title: "Educated",
+    author: "Tara Westover",
+    year: 2018,
+    category: "Memoir",
+    copies: 2,
+    availableCopies: 2
+  },
+  {
+    id: "b7",
+    title: "The Alchemist",
+    author: "Paulo Coelho",
+    year: 1988,
+    category: "Fiction",
+    copies: 4,
+    availableCopies: 4
+  },
+  {
+    id: "b8",
+    title: "Thinking, Fast and Slow",
+    author: "Daniel Kahneman",
+    year: 2011,
+    category: "Psychology",
+    copies: 3,
+    availableCopies: 3
+  },
+  {
+    id: "b9",
+    title: "The Power of Habit",
+    author: "Charles Duhigg",
+    year: 2012,
+    category: "Self-help",
+    copies: 3,
+    availableCopies: 3
+  },
+  {
+    id: "b10",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925,
+    category: "Fiction",
+    copies: 2,
+    availableCopies: 2
   }
 ];
+
 
 
 // Initialize books in localStorage if not present
