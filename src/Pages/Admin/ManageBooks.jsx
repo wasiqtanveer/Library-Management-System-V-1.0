@@ -118,10 +118,10 @@ const ManageBooks = () => {
             <tbody>
               {books.map((book) => (
                 <tr key={book.id}>
-                  <td><strong>{book.title}</strong></td>
-                  <td>{book.author}</td>
-                  <td><span className="badge">{book.category}</span></td>
-                  <td>{book.availableCopies} / {book.copies}</td>
+                  <td data-label="Title"><strong>{book.title}</strong></td>
+                  <td data-label="Author">{book.author}</td>
+                  <td data-label="Category"><span className="badge">{book.category}</span></td>
+                  <td data-label="Stock">{book.availableCopies} / {book.copies}</td>
                   <td>
                     <button className='btn-edit' onClick={() => handleEditClick(book)}>Edit</button>
                     <button className='btn-delete' onClick={()=>handleDeleteBook(book.id)}>Delete</button>

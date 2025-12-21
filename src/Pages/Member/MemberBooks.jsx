@@ -51,10 +51,10 @@ const MemberBooks = () => {
             <tbody>
               {books.map(book => (
                 <tr key={book.id}>
-                  <td><strong>{book.title}</strong></td>
-                  <td>{book.author}</td>
-                  <td><span className="badge">{book.category}</span></td>
-                  <td>{book.availableCopies} Copies Left</td>
+                  <td data-label="Title"><strong>{book.title}</strong></td>
+                  <td data-label="Author">{book.author}</td>
+                  <td data-label="Category"><span className="badge">{book.category}</span></td>
+                  <td data-label="Available">{book.availableCopies} Copies Left</td>
                   <td style={{ textAlign: 'center' }}>
                     {book.availableCopies > 0 ? (
                       <button

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import ProtectedRoute from './Components/ProtectedRoute'
 
 
@@ -15,7 +15,7 @@ import AdminBorrowedBooks from './Pages/Admin/AdminBorrowedBooks'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
 
         {/* Public Routes */}
@@ -48,7 +48,7 @@ const App = () => {
 
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
