@@ -1,16 +1,231 @@
-# React + Vite
+📚 Library Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Library Management System built using React as the final project of my internship.
+The application supports role-based access for Admins and Members and handles complete book borrowing and returning workflows using local storage for data persistence.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+🚀 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project simulates how a real-world library system works.
+Admins manage the library inventory, while members can browse, borrow, and return books.
 
-## Expanding the ESLint configuration
+The focus was on:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clean application flow
+
+Proper separation of concerns
+
+Practical CRUD operations
+
+Understanding real-world logic rather than just UI
+
+
+
+---
+
+👥 User Roles
+
+🔑 Admin
+
+Login with admin role
+
+Add new books
+
+Edit existing books
+
+Delete books
+
+View available and borrowed copies
+
+Manage library inventory through a dashboard
+
+
+📖 Member
+
+Login with member role
+
+View available books
+
+Borrow books (only if copies are available)
+
+View borrowed books
+
+Return individual books
+
+Return all borrowed books at once
+
+
+
+---
+
+⚙️ Core Features
+
+Role-based authentication
+
+Protected routes using React Router
+
+Sidebar-based dashboard layout
+
+CRUD operations for books
+
+Borrow and return logic with copy tracking
+
+Persistent data using localStorage
+
+Clean separation between UI and services
+
+
+
+---
+
+🛠️ Tech Stack
+
+React
+
+React Router DOM
+
+JavaScript (ES6+)
+
+CSS
+
+LocalStorage (for data persistence)
+
+
+
+---
+
+🗂️ Project Structure
+
+src/
+│
+├── Pages/
+│   ├── Login.jsx
+│   ├── Signup.jsx
+│   ├── Admin/
+│   │   ├── AdminDashboard.jsx
+│   │   └── ManageBooks.jsx
+│   ├── Member/
+│   │   ├── MemberBooks.jsx
+│   │   └── BorrowedBooks.jsx
+│
+├── Layouts/
+│   ├── AdminLayout.jsx
+│   └── MemberLayout.jsx
+│
+├── Components/
+│   ├── AdminSidebar.jsx
+│   ├── MemberSidebar.jsx
+│   └── ProtectedRoute.jsx
+│
+├── Services/
+│   └── booksService.js
+│
+├── styles/
+│   └── global.css
+│
+└── App.jsx
+
+
+---
+
+🔐 Authentication Logic
+
+User data is stored in localStorage
+
+Each user has a role (admin or member)
+
+Routes are protected using a ProtectedRoute component
+
+Unauthorized access is automatically redirected
+
+
+
+---
+
+📦 Book Management Logic
+
+Each book has:
+
+Total copies
+
+Available copies
+
+
+Borrowing a book:
+
+Decreases available copies
+
+Adds the book to the user’s borrowed list
+
+
+Returning a book:
+
+Restores the available copy count
+
+Removes the book from the user’s borrowed list
+
+
+Returning all books:
+
+Restores all borrowed copies at once
+
+
+
+
+---
+
+🧪 Learning Outcome
+
+This project helped me:
+
+Understand real CRUD workflows
+
+Handle state and persistence properly
+
+Design role-based dashboards
+
+Write cleaner service-based logic
+
+Avoid common beginner mistakes in React apps
+
+
+The internship also included monthly mini-projects, which helped maintain consistency and prevented skill stagnation throughout the learning process.
+
+
+---
+
+🌐 Live Project / Website
+
+https://wasiqtanveer.github.io/Library-Management-System-V-1.0
+
+
+---
+
+🙏 Acknowledgements
+
+Software House: [Your Software House Name]
+
+Instructor: [Instructor Name]
+
+
+Special thanks for the structured mentorship, continuous feedback, and practical learning environment.
+
+
+---
+
+📌 Future Improvements
+
+Backend integration (Node.js / Express)
+
+Database support (MongoDB / PostgreSQL)
+
+Better authentication with JWT
+
+Search and filtering
+
+UI/UX enhancements
+
+Analytics for admin dashboard
+
