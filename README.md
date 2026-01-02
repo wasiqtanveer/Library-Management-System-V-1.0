@@ -128,6 +128,7 @@ src/
 └── App.jsx
 
 
+
 ---
 
 🔐 Authentication Logic
@@ -205,9 +206,9 @@ https://wasiqtanveer.github.io/Library-Management-System-V-1.0
 
 🙏 Acknowledgements
 
-Software House: [Your Software House Name]
+Software House: Brandora
 
-Instructor: [Instructor Name]
+Instructor: Hammad Baseer
 
 
 Special thanks for the structured mentorship, continuous feedback, and practical learning environment.
