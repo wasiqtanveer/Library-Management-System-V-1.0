@@ -92,43 +92,6 @@ CSS
 
 LocalStorage (for data persistence)
 
-
-
----
-
-🗂️ Project Structure
-
-src/
-│
-├── Pages/
-│   ├── Login.jsx
-│   ├── Signup.jsx
-│   ├── Admin/
-│   │   ├── AdminDashboard.jsx
-│   │   └── ManageBooks.jsx
-│   ├── Member/
-│   │   ├── MemberBooks.jsx
-│   │   └── BorrowedBooks.jsx
-│
-├── Layouts/
-│   ├── AdminLayout.jsx
-│   └── MemberLayout.jsx
-│
-├── Components/
-│   ├── AdminSidebar.jsx
-│   ├── MemberSidebar.jsx
-│   └── ProtectedRoute.jsx
-│
-├── Services/
-│   └── booksService.js
-│
-├── styles/
-│   └── global.css
-│
-└── App.jsx
-
-
-
 ---
 
 🔐 Authentication Logic
